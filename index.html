@@ -43,11 +43,13 @@
             font-weight: bolder;
             margin-bottom: 1.2rem;
         }
-        .descricao{
+
+        .descricao {
             color: grey;
         }
-        .Botões{
-          margin-block: 1rem;
+
+        .Botões {
+            margin-block: 1rem;
         }
     </style>
 </head>
@@ -61,34 +63,28 @@
 
         <div class="input-group mb-3">
 
-            <input type="text" class="form-control" placeholder="Digite o seu nome" aria-label="Digite o seu nome"
-                aria-describedby="button-addon2">
+            <input id="nome" type="text" class="form-control" placeholder="Digite o seu nome">
         </div>
 
         <div class="input-group mb-3">
 
-            <input type="text" class="form-control" placeholder="Digite a sua senha" aria-label="Digite a sua senha"
-                aria-describedby="button-addon2">
+            <input id="senha" type="password" class="form-control" placeholder="Digite a sua senha"
+>
         </div>
 
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Digite o seu email"" aria-label="Digite o seu email"
-                aria-describedby="button-addon2">
+            <input id="email" type="email" class="form-control" placeholder="Digite o seu email">
         </div>
 
         <a href="" style="margin-left: 0.3rem;">Fazer Login</a>
-<div class="Botões">
-    <button class="btn btn-primary" style="width: 100%;">Cadastrar</button>
-</div>
-  
+        <div class="Botões" style="display: flex;">
+            <button onclick="JSON()" class="btn btn-primary" style="width: 47%; margin-right: 1rem;">Cadastrar</button>
+            <button onclick="pegarJSON()" class="btn btn-primary" style="width: 47%;">Ver Cadastrados</button>
+        </div>
+
     </div>
 
-    <script>
-        const usuario = {
-  nome: "João Silva",
-  senha: "senha123",
-  email: "joao.silva@example.com"
-};
+    <script src="dados.js">
     </script>
 </body>
 
