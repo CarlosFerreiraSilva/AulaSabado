@@ -1,0 +1,62 @@
+html,
+body {
+    border: 0;
+    margin: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://st2.depositphotos.com/1605581/8381/i/450/depositphotos_83819270-stock-photo-blue-gradient-background.jpg');
+    background-size: cover;
+}
+/* 
+Cadastro */
+.Cadastro {
+    width: 25rem;
+    height: 25rem;
+    /* box-shadow: 2px 2px 2px 2px grey; */
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: white;
+    margin: 1rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.titulos {
+    font-weight: bolder;
+    margin-bottom: 1.2rem;
+}
+
+.descricao {
+    color: grey;
+}
+
+.Cadastro-Botões {
+    margin-block: 1rem;
+}
+
+.Login{
+    width: 20rem;
+    height: 23rem;
+    /* box-shadow: 2px 2px 2px 2px grey; */
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: white;
+    margin: 1rem;
+    display: none;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(50px);}
+    to { opacity: 1; transform: translateX(0);}
+ 
+  }
+  
+
+
+.link{
+    color: rgb(0, 162, 255);
+    cursor: pointer;
+}

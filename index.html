@@ -16,48 +16,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
-    <style>
-        html,
-        body {
-            border: 0;
-            margin: 0;
-            min-width: 100vw;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-image: url('https://st2.depositphotos.com/1605581/8381/i/450/depositphotos_83819270-stock-photo-blue-gradient-background.jpg');
-            background-size: cover;
-        }
-
-        .Cadastro {
-            width: 25rem;
-            height: 25rem;
-            /* box-shadow: 2px 2px 2px 2px grey; */
-            border-radius: 5px;
-            padding: 1rem;
-            background-color: white;
-        }
-
-        .Cadastro-title {
-            font-weight: bolder;
-            margin-bottom: 1.2rem;
-        }
-
-        .descricao {
-            color: grey;
-        }
-
-        .Botões {
-            margin-block: 1rem;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="Cadastro container">
+    <div id="Cadastro" class="Cadastro container">
 
-        <h1 class="Cadastro-title">Cadastro</h1>
+        <h1 class="titulos">Cadastro</h1>
 
         <p class="descricao">Digite seus dados para criar uma conta</p>
 
@@ -76,11 +41,52 @@
             <input id="email" type="email" class="form-control" placeholder="Digite o seu email">
         </div>
 
-        <a href="" style="margin-left: 0.3rem;">Fazer Login</a>
-        <div class="Botões" style="display: flex;">
-            <button onclick="JSON()" class="btn btn-primary" style="width: 47%; margin-right: 1rem;">Cadastrar</button>
-            <button onclick="pegarJSON()" class="btn btn-primary" style="width: 47%;">Ver Cadastrados</button>
+        <a class="link" onclick="LoginDisplay()" style="margin-left: 0.3rem;">Fazer Login</a>
+        <div class="Cadastro-Botões" style="display: flex;">
+            <button onclick="jason()" class="btn btn-primary" style="width: 47%; margin-right: 1rem;">Cadastrar</button>
+            <button onclick="pegarJason()" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary" style="width: 47%;">Ver Cadastrados</button>
         </div>
+
+    </div>
+
+
+  
+  <!-- Modal -->
+  <div class="modal xl fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 style="font-weight: bolder;" class="modal-title fs-5" id="exampleModalLabel">Cadastrados</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="modal-body" class="modal-body">
+          ...
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="Login" class="Login container">
+
+        <h1 class="titulos">Login</h1>
+
+        <p class="descricao">Digite seus dados para entrar na sua conta</p>
+
+        <div class="input-group mb-3">
+
+            <input id="nome" type="text" class="form-control" placeholder="Digite o seu nome">
+        </div>
+
+        <div class="input-group mb-3">
+
+            <input id="senha" type="password" class="form-control" placeholder="Digite a sua senha">
+        </div>
+
+        <a onclick="CadastroDisplay()" class="link" style="margin-left: 0.3rem;">Voltar?</a>
+        <br>
+        <br>
+       <button onclick="login()" class="btn btn-primary" style="width: 47%; margin-right: 1rem;">Login</button>
+
 
     </div>
 
